@@ -1,0 +1,18 @@
+@import '~normalize.css';
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@import 'global.scss';
+
+@import './blocks/fixed-header';
+@import './blocks/burger-menu';
+@import './blocks/modal';
+@import './blocks/page-title';
+@import './blocks/page-nav';
+@import './blocks/_info-service';
+@import './blocks/brands';
+@import './blocks/equipment';
+@import './blocks/prices';
+@import './blocks/footer';
+

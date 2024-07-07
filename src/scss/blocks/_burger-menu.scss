@@ -1,0 +1,176 @@
+.burger-menu {
+    z-index: 15;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+    transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+    overflow-y: auto;  
+
+    @media (min-width: $screen-m)  {
+        width: 320px;
+    }
+
+    @media (min-width: $screen-l)  {
+        left: 0;
+        -webkit-transform: none;
+                transform: none;
+    }
+
+    &__wrapper {
+        background-color: #fff;
+        width: 100%;
+        min-height: 100vh;
+        padding: 16.78px 16px 32px;
+        @include flex-space-beetwen(stretch, 20.78px);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    &__header {
+        @include flex-space-beetwen;
+    }
+
+    &__header-left {
+        @include flex-space-beetwen($gap: 7.22px);
+    }
+
+    &__close {
+        @media (min-width: $screen-l)  {
+           display: none;
+        }
+    }
+
+    &__content {
+        @include flex-space-beetwen($align: stretch, $gap: 32px, $wrap: nowrap);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+    }
+
+    &__nav {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+
+    &__nav-links {       
+        @include flex-space-beetwen(stretch, 24px);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    &__link {
+        @include text-design(500);
+        position: relative;
+
+        &:hover {
+            color: $main-color;
+        }
+
+        &:hover::before {
+            content: '';
+            background-color: $main-color;
+            position: absolute;
+            top: -5px;
+            left: 
+-16px;
+            width: 4px;
+            height: 32px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            opacity: 0.3;
+        }
+
+        &_active {
+            color: $active-text;
+            position: relative;
+
+            &::before {
+                content: '';
+                background-color: $highlight;
+                position: absolute;
+                top: -5px;
+                left: 
+-16px;
+                width: 4px;
+                height: 32px;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+    }
+
+    &__footer {
+        @include flex-space-beetwen(stretch, 0);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    &__footer-btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__mail {
+        @include text-design(500);
+        margin-bottom: 12px;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    &__phone {
+        @include text-design(700, 24px, 32px, -0.6px);
+        margin-bottom: 8px;
+        
+        &:hover {
+            color: $main-color;
+        }
+
+        @media (min-width: $screen-m)  {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__languages {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 7px;
+    }
+
+    &__lang {
+        @include text-design(500);        
+        
+        &:hover {
+            color: $main-color;
+        }
+
+        &_active {
+            color: $active-text;
+        }
+
+
+    }
+ 
+}
+

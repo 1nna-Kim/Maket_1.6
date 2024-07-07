@@ -1,0 +1,50 @@
+.page-nav {
+    padding: 0 0 8px 16px;
+
+    @media (min-width: $screen-m) {
+        padding: 0 0 8px 24px;
+    }
+
+    @media (min-width: $screen-l) {
+        padding: 0 22px 0 34px;
+    }
+
+    &__links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        gap: 5px;
+        overflow-x: auto;
+        
+
+        @media (min-width: $screen-l) {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+    }
+
+    &__link {
+        @include text-design($weight: 500, $color: $active-text);
+        white-space: nowrap;
+        padding: 8px 22px;
+        border-radius: 10px;
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+        border: 2px solid $background;
+
+        &:hover {
+            border: 2px solid $hover-color;
+            background-color: #FFF;
+            color: $main-color;
+        }
+        
+        &_active {
+            border: 2px solid #B8FFEC;
+            background-color: #FFF;
+           
+        }
+    }
+}

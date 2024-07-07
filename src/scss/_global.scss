@@ -1,0 +1,345 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none; 
+}
+
+body {
+  position: relative;
+  font-family: $font-family;
+  min-width: 320px;
+  max-width: 1920px;
+  overflow-x: hidden;
+  font-style: normal;
+  margin: 0 auto;
+  padding: 0;
+  background: #FFF;
+  height: 100vh;
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  li {
+	list-style: none;
+  }
+  
+  a {
+	text-decoration: none;
+  }
+  
+  a:visited,
+  a:link,
+  a:active {
+	color: inherit;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+	margin: 0;
+	padding: 0;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+// ---------------------------------------------------------------------
+// *********************************************************************
+// ---------------------------------------------------------------------
+
+.icon {
+  background-color: $main-color;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  
+  &:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  &:active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+}
+
+.button {
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  &:active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
+.btn {
+  background-color: $main-color;
+  text-transform: uppercase;
+  @include text-design($weight: 700,$size: 12px, $letter-spacing: -0.15px, $color: #FFF);
+  border-radius: 30px;
+  display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+  
+}
+
+.show-more {
+  @include flex-space-beetwen($gap: 8px);
+  @include text-design(500);
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  &:active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
+.slide-card {
+  cursor: pointer;
+  background-color: #FFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+
+  &:hover {
+    border: 1px solid $hover-color;
+  }
+
+  &:hover .card-btn {
+    border: none;
+    background-color: $hover-color;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+.card-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $main-color;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 16px;
+  bottom: 0px !important;
+
+  @media (min-width: $screen-m) {
+    display: none;
+  }
+  // Изменение фона точек пагинации
+  .swiper-pagination-bullet {
+    background: #DDD;
+    opacity: 1;
+    
+    // Стили для активной точки
+    &-active {
+      background: #B5B6BC; // Цвет фона
+      opacity: 1; // Непрозрачность активной точки
+    }
+  }
+
+  // Изменение размеров точек
+  .swiper-pagination-bullet {
+    width: 12px; // Ширина точки
+    height: 12px; // Высота точки
+    margin: 0 6px !important; // Отступы между точками
+  }
+}
+
+// .service {
+// }
+
+.service-wrapper {
+  min-height: 100vh;
+  
+  @media (min-width: $screen-l) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.blur-burger-menu, 
+.blur-modal-call,
+.blur-modal-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+}
+
+.blur-burger-menu {
+    z-index: 10;
+}
+
+.blur-modal-call,
+.blur-modal-feedback {
+  z-index: 20;
+}
+
+
+.content-wrapper {
+  background-color: $background;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  padding-top: 88px;
+
+  @media (min-width: $screen-l) {
+    margin-left: 320px;
+    padding-top: 0;
+  }
+  
+}
+
+.content {  
+  -webkit-box-flex: 1;  
+      -ms-flex: 1;  
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: $screen-m) {
+    gap: 32px;
+  }
+
+  @media (min-width: $screen-l) {
+    gap: 50px;
+  }
+}
+
+ .page-header{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: $screen-m) {
+    gap: 32px;
+  }
+
+  @media (min-width: $screen-l) {
+    gap: 8px;
+  }
+ }
+
+.content-block {
+  position: relative;
+}
+
+.block-content-inner-wrapper {
+  padding-top: 16px;
+
+  @media (min-width: $screen-m) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: $screen-m) {
+    &:first-child{
+    padding-top: 16px;
+    }
+  }
+}
+
+.block-content-title {
+  @include text-design($color: $active-text);
+  text-transform: uppercase;
+  padding: 16px;
+  background: $gradient-title; 
+  border-top: 1px solid #D9FFF5;
+}
+
+

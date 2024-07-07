@@ -1,0 +1,23 @@
+@mixin text-design($weight: 400,$size: 16px, $line-height: 24px, $letter-spacing: -0.2px, $color: $main-text) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}
+
+@mixin flex-space-beetwen($align: center, $gap: 16px, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: $align;
+        -ms-flex-align: $align;
+            align-items: $align;
+    gap: $gap;
+    -ms-flex-wrap: $wrap;
+        flex-wrap: $wrap;
+}

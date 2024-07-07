@@ -1,0 +1,77 @@
+.equipment {
+    padding-left: 16px;
+
+    @media (min-width: $screen-m) {
+        padding-left: 24px;
+    }
+
+    @media (min-width: $screen-l) {
+        padding: 0 32px;
+    }
+
+    &__swiper {
+    }   
+
+    &__swiper-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+       
+        @media (min-width: $screen-m) {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            max-height: 160px;
+            overflow: hidden;
+            -webkit-transition: max-height 0.5s ease-in-out;
+            transition: max-height 0.5s ease-in-out;
+            gap: 16px 24px;
+        }
+
+        @media (min-width: $screen-l) {
+            gap: 16px 32px;
+        }
+    }
+
+    &__show-more {
+        display: none;
+
+        @media (min-width: $screen-m) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-top: 24px;
+        }
+    }
+}
+.equipment-card {
+    width: 240px;
+    height: 160px;
+    padding: 16px;
+    @include text-design(500);
+    @include flex-space-beetwen($align: flex-start, $gap: 64px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    
+    @media (min-width: $screen-m) {
+        width: 224px;
+        height: 160px;
+    }
+
+    @media (min-width: $screen-l) {
+        width: 240px;
+        height: 160px;
+    }
+
+    .card-btn {
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    }
+
+    &__title {
+    }
+}
+

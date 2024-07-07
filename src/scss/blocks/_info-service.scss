@@ -1,0 +1,87 @@
+.info-service {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+
+	@media (min-width: $screen-m) {
+		padding: 0 24px;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		gap: 48px;
+	}
+
+	@media (min-width: $screen-l) {
+		padding: 0 29px 0 34px;
+		gap: 36px;
+	}
+
+	&__description {
+		padding: 0 16px;
+		height: 100%;	 
+			
+		@media (min-width: $screen-m) {
+			padding: 0;
+			min-width: 43%;
+		}
+	}
+
+	&__description-text {
+
+		@media (min-width: $screen-m) {
+			margin-bottom: 16px;
+		}
+
+		&_hide {
+			max-height: 0;
+			overflow: hidden;
+			-webkit-transition: max-height 0.5s ease-in-out;
+			transition: max-height 0.5s ease-in-out;
+			margin-bottom: 0;
+
+			@media (min-width: $screen-m) {
+				max-height: 35px;
+			}
+		}
+	}
+
+	&__read-more {
+		padding: 16px 0;
+
+		@media (min-width: $screen-m) {
+			padding: 10px 0;
+		}
+
+		@media (min-width: $screen-l) {
+			padding: 14px 0;
+		}
+
+		img {
+			-webkit-transition: -webkit-transform 0.5s linear;
+			transition: -webkit-transform 0.5s linear;
+			transition: transform 0.5s linear;
+			transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+		}
+	}
+
+	&__img-logo {
+		height: 100%;
+		min-width: 100%;
+		-o-object-fit: cover;
+		   object-fit: cover;			 
+			
+		@media (min-width: $screen-m) {
+			min-width: 47%;
+		}
+
+	}
+}
+

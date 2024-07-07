@@ -1,0 +1,77 @@
+.brands {
+    padding-left: 16px;
+
+    @media (min-width: $screen-m) {
+        padding-left: 24px;
+    }
+
+    @media (min-width: $screen-l) {
+        padding: 0 32px;
+    }
+
+    &__swiper {
+    }
+
+    &__swiper-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+
+        @media (min-width: $screen-m) {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            gap: 16px 24px;
+            max-height: 160px;
+            overflow: hidden;
+			-webkit-transition: max-height 0.5s ease-in-out;
+			transition: max-height 0.5s ease-in-out;
+        }
+
+        @media (min-width: $screen-l) {
+            gap: 16px 32px;
+        }
+    }
+
+    &__show-more {
+        display: none;
+
+        @media (min-width: $screen-m) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-top: 24px;
+        }
+    }
+}
+
+.brands-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 240px;
+    height: 72px;
+    padding: 16px;
+
+    @media (min-width: $screen-m) {
+        width: 224px;
+    }
+
+    @media (min-width: $screen-l) {
+        width: 240px;
+    }
+
+    &__img {
+        max-width: 50%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+}
